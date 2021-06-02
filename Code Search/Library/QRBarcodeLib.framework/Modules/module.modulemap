@@ -1,0 +1,11 @@
+framework module QRBarcodeLib {
+  umbrella header "QRBarcodeLib.h"
+
+  export *
+  module * { export * }
+}
+
+module QRBarcodeLib.Swift {
+    header "QRBarcodeLib-Swift.h"
+    requires objc
+}

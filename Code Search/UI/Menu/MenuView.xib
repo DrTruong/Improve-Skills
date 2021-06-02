@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuView" customModule="Code_Search" customModuleProvider="target">
+            <connections>
+                <outlet property="aboutAppButton" destination="D4q-hZ-pmW" id="hBK-Xv-edr"/>
+                <outlet property="privacyButton" destination="iLP-ck-sBm" id="M1S-up-pX2"/>
+                <outlet property="removeAllButton" destination="0yP-Q7-6jt" id="OV5-Tj-b6R"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="179" height="144"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Z7s-eP-obh">
+                    <rect key="frame" x="0.0" y="0.0" width="179" height="144"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yP-Q7-6jt">
+                            <rect key="frame" x="0.0" y="0.0" width="179" height="48"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" systemColor="labelColor"/>
+                            </state>
+                            <connections>
+                                <action selector="removeAllButtonDidTouch:" destination="-1" eventType="touchUpInside" id="X6h-V7-xUN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLP-ck-sBm" userLabel="privacyButton">
+                            <rect key="frame" x="0.0" y="48" width="179" height="48"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" systemColor="labelColor"/>
+                            </state>
+                            <connections>
+                                <action selector="privacyButtonDidTouch:" destination="-1" eventType="touchUpInside" id="70U-5B-fJg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4q-hZ-pmW" userLabel="aboutAppButton">
+                            <rect key="frame" x="0.0" y="96" width="179" height="48"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" systemColor="labelColor"/>
+                            </state>
+                            <connections>
+                                <action selector="aboutAppButtonDidTouch:" destination="-1" eventType="touchUpInside" id="tZk-hd-sg1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Z7s-eP-obh" secondAttribute="trailing" id="Bv8-gp-5yX"/>
+                <constraint firstItem="Z7s-eP-obh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="foC-bh-QFX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Z7s-eP-obh" secondAttribute="bottom" id="lNp-qk-ls8"/>
+                <constraint firstItem="Z7s-eP-obh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sto-7b-dHk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-354" y="542"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
