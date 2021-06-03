@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImproveDelegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTo-kz-49V" customClass="RandomColorView" customModule="ImproveDelegate" customModuleProvider="target">
+                                <rect key="frame" x="207" y="44" width="207" height="448"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9C-8u-inl" customClass="RandomNumberView" customModule="ImproveDelegate" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="207" height="448"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a47-7j-51y" customClass="ButtonView" customModule="ImproveDelegate" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="492" width="414" height="404"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="a47-7j-51y" secondAttribute="trailing" id="6cy-Hh-M2b"/>
+                            <constraint firstItem="KTo-kz-49V" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/2" id="8jH-1b-prs"/>
+                            <constraint firstItem="a47-7j-51y" firstAttribute="top" secondItem="KTo-kz-49V" secondAttribute="bottom" id="HL8-5E-zdu"/>
+                            <constraint firstItem="KTo-kz-49V" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JBq-vx-o2r"/>
+                            <constraint firstAttribute="bottom" secondItem="a47-7j-51y" secondAttribute="bottom" id="MrX-2b-FNB"/>
+                            <constraint firstItem="a47-7j-51y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eVd-gT-UHB"/>
+                            <constraint firstItem="M9C-8u-inl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/2" id="fBf-7r-blm"/>
+                            <constraint firstItem="M9C-8u-inl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="jKj-XA-Pup"/>
+                            <constraint firstItem="KTo-kz-49V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="msF-ca-eY5"/>
+                            <constraint firstItem="M9C-8u-inl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pue-Fp-v71"/>
+                            <constraint firstItem="M9C-8u-inl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ueK-wi-z7E"/>
+                            <constraint firstItem="KTo-kz-49V" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/2" id="wVc-MU-efD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="randomButtonView" destination="a47-7j-51y" id="a9J-fH-Gsh"/>
+                        <outlet property="randomColorView" destination="KTo-kz-49V" id="E5w-Th-u8x"/>
+                        <outlet property="randomNumberView" destination="M9C-8u-inl" id="l7q-eM-YKE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="124"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
