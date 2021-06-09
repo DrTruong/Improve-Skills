@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="CameraViewController" id="BYZ-38-t0r" customClass="CameraViewController" customModule="SmileCameraApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPL-Go-DMU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7a-Bv-9qH">
+                                        <rect key="frame" x="177" y="796" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="HdU-id-LaD"/>
+                                            <constraint firstAttribute="width" constant="60" id="WeO-3s-AYH"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="didTakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YhC-qt-c1m"/>
+                                            <segue destination="0vR-09-7KO" kind="show" identifier="goToImageCaptured" id="YCJ-6n-qxl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="e7a-Bv-9qH" secondAttribute="bottom" constant="40" id="Ma5-lQ-OXx"/>
+                                    <constraint firstItem="e7a-Bv-9qH" firstAttribute="centerX" secondItem="lPL-Go-DMU" secondAttribute="centerX" id="krQ-4y-afX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lPL-Go-DMU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HFz-5M-qgN"/>
+                            <constraint firstAttribute="trailing" secondItem="lPL-Go-DMU" secondAttribute="trailing" id="LIS-7a-yGZ"/>
+                            <constraint firstAttribute="bottom" secondItem="lPL-Go-DMU" secondAttribute="bottom" id="ccN-5D-pRD"/>
+                            <constraint firstItem="lPL-Go-DMU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ePY-1P-eCV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonTake" destination="e7a-Bv-9qH" id="JFb-t0-abz"/>
+                        <outlet property="previewView" destination="lPL-Go-DMU" id="BwI-zm-KRh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="101.78571428571428"/>
+        </scene>
+        <!--Image Capture View Controller-->
+        <scene sceneID="5HG-PN-imX">
+            <objects>
+                <viewController id="0vR-09-7KO" customClass="ImageCaptureViewController" customModule="SmileCameraApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UFP-2h-3H6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEL-Yd-XE9" customClass="ImageCaptureView" customModule="SmileCameraApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X0V-SF-mvP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sEL-Yd-XE9" firstAttribute="leading" secondItem="UFP-2h-3H6" secondAttribute="leading" id="5Ib-Xh-6WH"/>
+                            <constraint firstItem="sEL-Yd-XE9" firstAttribute="top" secondItem="X0V-SF-mvP" secondAttribute="top" id="HMU-RT-yPy"/>
+                            <constraint firstItem="sEL-Yd-XE9" firstAttribute="bottom" secondItem="X0V-SF-mvP" secondAttribute="bottom" id="KsC-0d-rjm"/>
+                            <constraint firstAttribute="trailing" secondItem="sEL-Yd-XE9" secondAttribute="trailing" id="TlR-io-AZ8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xna-RX-A3X"/>
+                    <connections>
+                        <outlet property="captureView" destination="sEL-Yd-XE9" id="501-lu-AHD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PYe-VA-yxu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1140.5797101449277" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

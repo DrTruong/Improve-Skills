@@ -1,0 +1,11 @@
+framework module SmileCameraLib {
+  umbrella header "SmileCameraLib.h"
+
+  export *
+  module * { export * }
+}
+
+module SmileCameraLib.Swift {
+    header "SmileCameraLib-Swift.h"
+    requires objc
+}
